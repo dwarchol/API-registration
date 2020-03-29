@@ -27,7 +27,7 @@ const init = async () => {
 
     const server = new Hapi.Server({  
         host: 'localhost',
-        port: 3000
+        port: process.env.PORT || 5000
       });
       server.start();
       console.log(`Server running at ${server.info.uri}`);
